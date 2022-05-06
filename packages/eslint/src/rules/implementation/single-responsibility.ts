@@ -9,8 +9,7 @@ type ComplexStatement = {
 const DEFAULT_EXCLUDED_STATEMENTS = [{ name: 'IfStatement', count: 3 }];
 
 export const onSingleResponsibilityCreate = (context: Context) => {
-  const complexStatements =
-    (context.options[context.options.length - 1] as ComplexStatement[]) ?? DEFAULT_EXCLUDED_STATEMENTS;
+  const complexStatements = (context.options[0] as ComplexStatement[]) ?? DEFAULT_EXCLUDED_STATEMENTS;
   const detectedStatements: ComplexStatement[] = [];
 
   function checkComplexity(node: FunctionDeclarationNode) {

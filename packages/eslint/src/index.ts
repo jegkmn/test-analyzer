@@ -1,3 +1,4 @@
+import { cognitiveComplexity } from './rules/definition/cognitive-complexity';
 import { hiddenDependencies } from './rules/definition/hidden-dependencies';
 import { nestedStatements } from './rules/definition/nested-statements';
 import { newKeyword } from './rules/definition/new-keyword';
@@ -21,5 +22,6 @@ module.exports = {
     'too-many-dependencies': tooManyDependencies,
     'static-definition': staticDefinition,
     'type-independent': typeIndependent,
+    'cognitive-complexity': cognitiveComplexity,
   },
 };

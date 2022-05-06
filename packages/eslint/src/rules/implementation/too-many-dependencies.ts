@@ -4,7 +4,7 @@ import { Context } from '../../types/eslint/context';
 export const DEFAULT_LIMIT = 3;
 
 export const onTooManyDependenciesCreate = (context: Context) => {
-  const limit = context.options[context.options.length - 1]?.limit ?? DEFAULT_LIMIT;
+  const limit = context.options[0]?.limit ?? DEFAULT_LIMIT;
 
   return {
     ClassDeclaration(node: ClassDeclarationNode) {

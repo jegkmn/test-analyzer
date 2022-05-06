@@ -4,7 +4,7 @@ import { Context } from '../../types/eslint/context';
 const DECLARED_CLASSES: string[] = [];
 
 export const onSingletonCreate = (context: Context) => {
-  const excludedClasses = context.options[context.options.length - 1]?.excludedClasses;
+  const excludedClasses = context.options[0]?.excludedClasses;
 
   return {
     ExpressionStatement(node: ExpressionStatementNode) {

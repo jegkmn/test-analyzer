@@ -20,7 +20,7 @@ export interface NestedStatementsReturn {
 
 export const onNestedStatementsCreate = (context: Context): NestedStatementsReturn => {
   const result: NestedStatementsReturn = {};
-  const maxDepth = context.options[context.options.length - 1]?.limit ?? DEFAULT_LIMIT;
+  const maxDepth = context.options[0]?.limit ?? DEFAULT_LIMIT;
 
   function checkLevel(node: any) {
     let level = 0;

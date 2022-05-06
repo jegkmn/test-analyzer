@@ -13,8 +13,7 @@ type Variable = {
 };
 
 export const onTypeIndependentCreate = (context: Context) => {
-  const propertyAccessLimit =
-    context.options[context.options.length - 1]?.propertyAccessLimit ?? DEFAULT_PROPERTY_ACCESS_LIMIT;
+  const propertyAccessLimit = context.options[0]?.propertyAccessLimit ?? DEFAULT_PROPERTY_ACCESS_LIMIT;
   const declaredVariables: Variable[] = [];
 
   return {
